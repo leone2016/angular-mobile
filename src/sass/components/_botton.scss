@@ -1,0 +1,139 @@
+.btn {
+  background-position: center;
+}
+.btn-right {
+  &, &:link, &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    //position: relative;
+    border: none;
+    background-color: $color-white;
+    color: $color-primary;
+  }
+  &:active,  &:focus{
+    outline: none;
+  }
+}
+.btn{
+  text-align: center;
+  margin-bottom: env(safe-area-inset-bottom);
+  &,&:link, &:visited{
+    padding: 1.5rem 4rem; /*toppx left-right*/
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position:relative;
+    font-size: $default-font-medium;
+    border: none;
+    @include respond(tab-port-min){
+      cursor: pointer !important;
+    }
+    width: 100%;
+    //letter-spacing: .1rem;
+    color: $color-white;
+  }
+  &-calendar{
+    @include respond(phone){
+      font-size: 1.2rem;
+    }
+  }
+  &-small{
+    padding: 1rem 1rem;
+    width: 50% !important;
+    font-weight: normal;
+    letter-spacing: .1rem;
+  }
+  &-transparent{
+    background-color: rgba($color-white, .9);
+    font-size: $default-font-medium;
+    //letter-spacing: 0 !important;
+    font-weight: bolder;
+    border: 1px solid ;
+
+  }
+  &-primary{
+    background-color: $color-primary;
+    transition: background 0.8s;
+    &:hover {
+      background: $color-primary radial-gradient(circle, transparent 1%, #255b98 1%) center/15000%;
+    }
+    &:active {
+      outline: none;
+      background-color: $color-primary;
+      background-size: 100%;
+      transition: background 0s;
+    }
+  }
+  &-secondary{
+    background-color: $color-secondary;
+    //color: $color-black;
+    transition: background 0.8s;
+    &:hover {
+      background: $color-secondary radial-gradient(circle, transparent 1%, #00d053 1%) center/15000%;
+    }
+    &:active {
+      outline: none;
+      background-color: $color-primary;
+      background-size: 100%;
+      transition: background 0s;
+    }
+  }
+  &:active,  &:focus{
+    outline: none;
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem   rgba(0,0,0,.2) /* (X or 0)  (shadow) (blur)  color (r,g,b,opacity)*/;
+  }
+  &-bottom{
+      position: fixed !important;
+      width: 32% !important;
+      bottom: 11rem !important;
+    z-index: 1;
+
+    @include respond(tab-port){
+      width: 50% !important;
+    }
+    @include respond(tab-port-land){
+      width: 48% !important;
+    }
+    @include respond(phone){
+      width: 95% !important;
+    }
+    &-2{
+      bottom: 5.5rem !important;
+    }
+    &-3{
+      bottom: .5rem !important;
+    }
+  }
+
+  &-registro{
+    bottom: 9% !important;
+  }
+}
+
+.btn__small{
+  background-position: center;
+  text-decoration: none;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  font-weight: bolder;
+  &-secondary{
+    color: $color-secondary;
+    background-color: $color-grey-light4;
+  }
+  &-tertiary{
+    color: $color-secondary !important;
+
+  }
+
+}
+.btn:disabled {
+  background: rgba($color-secondary,.4);
+}
+

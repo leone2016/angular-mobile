@@ -1,0 +1,49 @@
+.splash{
+  &-img{
+      position:absolute;
+      top:31%; /* 50% sobre el objeto padre*/
+      left:50%; /* 50% sobre el objeto padre*/
+      transform: translate( -50%, -50%);/* centra objetos con el 50% respecto al MISMO elemento */
+      text-align: center;
+      width: 30rem;
+      animation-name: moveInDown;
+      animation-duration:2s;
+      animation-timing-function: ease-in;
+    z-index: 1;
+  }
+  &-maarcaagrua{
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 77rem;
+    right: 0;
+    @include respond(phone){
+      width: 44rem;
+    }
+  }
+  &__background{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: $color-primary;
+
+  }
+}
+.saltar{
+  position: absolute;
+  right: 2px;
+  top: -98px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #004B8D;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 100;
+  padding: 2rem;
+}

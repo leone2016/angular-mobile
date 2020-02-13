@@ -1,0 +1,40 @@
+.navigation{
+  background-color: $color-white;
+  color: inherit;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  border-top: 2px solid $color-grey-light;
+  z-index: 10;
+  padding-bottom: env(safe-area-inset-bottom);
+
+  //padding: .5rem .2rem;
+  //font-size: 104%;
+  &__link{
+    text-decoration: none;
+    color: $color-grey-dark;
+    padding: .5rem;
+    &-icon{
+
+    }
+  }
+  &__link:hover{
+    color: $color-secondary;
+  }
+  &__link:focus{
+    color: $color-secondary;
+    outline-color: $color-white;
+  }
+  &__link .active{
+    color: $color-secondary;
+  }
+  display: none;
+  @include respond(tab-land){
+    display: block;
+  }
+
+}
+.active a{
+  color: $color-secondary;
+}

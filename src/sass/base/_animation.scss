@@ -1,0 +1,133 @@
+@keyframes moveInDown {
+  /*start*/
+  0% {
+    //opacity: 0;
+    //transform: translateX(-5rem);
+
+    transform:  translate( -50%, -50%) translateY(-35rem);
+  }
+  80%{
+    transform: translate( -50%, -50%) translateY(1rem);
+  }
+  /*FIN*/
+  100% {
+    //opacity: 1;
+    transform: translate( -50%, -50%) translateY(0)
+  }
+}
+
+@keyframes moveInUP {
+  /*start*/
+  0% {
+    //opacity: 0;
+    //transform: translateX(-5rem);
+    transform: translate(0%, -22%) translateY(-8.5rem);
+    background-color: rgba($color-black, .0);
+  }
+  //80%{
+  //  transform: translate( 0%, -50%) translateY(1rem);
+  //}
+  /*FIN*/
+  100% {
+    transform:  translate( 0%, -70%) translateY(-8.5rem);
+
+  }
+}
+@-webkit-keyframes preloader {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 150px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+@keyframes preloader {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 150px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+@keyframes difuminar {
+  /*start*/
+  0% {
+    opacity: 1;
+    //transform: translateX(-5rem);
+  }
+  80%{
+    opacity: .5;
+  }
+  /*FIN*/
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+// scss-lint:disable all
+.animated {
+  animation-duration: 0.5s;
+  // animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 0.25s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes slideInUp {
+
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes slideInUp {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}

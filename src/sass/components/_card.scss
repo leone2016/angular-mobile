@@ -1,0 +1,124 @@
+.card.borderBottom{
+  border: 0 none;
+  border-bottom: 1px solid $color-grey-light5 !important;
+}
+.card{
+  margin: 0 auto;
+  font-size: 1.4rem;
+  padding: 1rem;
+  border: 1px solid $color-grey-light5; /*-bottom*/
+  position: relative;
+  @include respond(tab-port-min){
+    cursor: pointer;
+  }
+  //cursor: pointer;
+  //background-color: orangered;
+  &__content{  }
+  &__circulo{
+    background-color: $color-grey-light;
+    margin: 0 5px 20px 0 !important;
+    width: 6rem;
+    height: 6rem;
+    float: left;
+    border-radius: 34px;
+    //-webkit-clip-path: circle(50% at 50% 50%);
+    //clip-path: circle(50% at 50% 50%);
+    position:relative; //tiene qvue er con  &__caption{  position: absolute}
+  }
+  &__caption{
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $color-grey;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.7rem;
+    text-align: center;
+  }
+  &__header{
+    &-title{
+      color:$color-primary;
+      font-weight: bold;
+      padding-right: 2rem;
+    }
+    &-title.espacio{
+      padding-right: 12rem;
+    }
+    &-subtitle{
+      color:$color-secondary;
+      //text-transform: uppercase;
+      font-weight: bold;
+      font-size: $default-font-mock;
+    }
+    &-origen{
+      color:$color-grey-dark;
+      //font-weight: bold;
+      font-size: $default-font-mock;
+    }
+    &-estado{
+      font-size: $default-font-mock;
+      color: $color-white;
+      position: absolute;
+      top: 7px;
+      right: 4rem;
+      padding: .5rem 1rem;
+      border-radius: 6px;
+      margin-right: 3rem;
+      &--pagada{background-color:  $color-estado-pagada}
+      &--cancelada{ background-color: $color-estado-anulada}
+      &--reagendada{ background-color: $color-estado-reagendada}
+      &--agendada{ background-color: $color-estado-agendada}
+      &--noestado{ background-color: $color-estado-agendada}
+    }
+  }
+  &__body{
+    //padding-left: 6rem;
+    //@include respond("phone"){
+    //  padding-left: 0.5rem;
+    //}
+    &-hour.noactivo{
+      background-color: #d6d6d6 !important;
+      color: $color-white !important;
+    }
+    &-hour{
+      border: 1px solid $color-grey-light;
+      border-radius: 4px;
+      color: $color-primary;
+      font-weight: bold;
+      @include respond(tab-port-min){
+        cursor: pointer;
+      }
+      text-align: center;
+      padding: 5px;
+    }
+    &-hour:hover{
+      background-color: rgba($color-primary, .2);
+    }
+    &-selected{
+      color: $color-white;
+      background-color: $color-primary !important;
+    }
+  }
+  &__footer, a{
+    right: 0;
+    text-align: right;
+    //width: 100%;
+    //position: absolute;
+    font-size: .85em;
+    font-weight: bold;
+    color: $color-secondary;
+    padding: .5rem;
+    &-hora{
+      font-size: .72em;
+      color: $color-primary;
+      font-weight: normal;
+      padding: .5rem 3rem;
+    }
+  }
+}
+
+.card.horario{
+  border: none; /*-bottom*/
+  border-top: 1px solid $color-grey-light5 !important; /*-bottom*/
+}

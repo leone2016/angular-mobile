@@ -6,6 +6,30 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/fonts/style.css">
+  <script>
+    window.TransformStream = null;
+    window.WritableStream = null;
+    window.ReadableStream = null;
+  </script>
+  <script>
+    var cordova = window.cordova;
+
+    if (typeof cordova !== undefined) {
+      window.addEventListener = function() {
+        (window.EventTarget || Window).prototype.addEventListener.apply(this, arguments);
+      };
+      window.removeEventListener = function() {
+        (window.EventTarget || Window).prototype.removeEventListener.apply(this, arguments);
+      };
+      document.addEventListener = function() {
+        (window.EventTarget || Document).prototype.addEventListener.apply(this, arguments);
+      };
+      document.removeEventListener = function() {
+        (window.EventTarget || Document).prototype.removeEventListener.apply(this, arguments);
+      };
+    }
+  </script>
 </head>
 <body>
   <app-root></app-root>

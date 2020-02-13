@@ -1,0 +1,25 @@
+.img-doctor{
+  position: fixed;
+  bottom: 0;
+  width: 16%;
+  right: 5rem;
+  z-index: 2;
+  &-izq{
+    left: 5rem;
+    //@include respond(big-desktop){
+    //  left: 10%;
+    //}
+  }
+  @include respond(phone){
+    display: none;
+  }
+
+}
+.img-doctor-onboarding{
+  position: fixed;
+  bottom: 0;
+  width: 50vh;
+  right: 5.2rem;
+  z-index: 2;
+  text-align: center;
+}

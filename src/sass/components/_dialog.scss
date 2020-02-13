@@ -1,0 +1,107 @@
+.modal__dialog{
+  & .ui-widget-content {
+    border: 0px solid transparent;
+    background-color: $color-grey-light;
+  }
+  & .ui-widget-header {
+    background: #f6f7f9 0 0 repeat-x;
+    background-color: $color-white !important;
+    border: 1px solid $color-grey-light2 !important;
+  }
+  & .ui-dialog.ui-widget .ui-dialog-titlebar {
+    padding: 2.8rem .2rem;
+    box-shadow: 0 .1rem 0.5rem rgba($color-black, .1);
+  }
+  & .ui-widget, .ui-widget * {
+    /* media-query Aplicar media query para eliminar el espacio que se crea en el modal*/
+    box-sizing: unset !important;
+  }
+& .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+  /* font-family: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif; */
+  font-size: $default-font-size;
+}
+
+}
+.angle{
+  position: absolute;
+  //font-size: xx-large;
+  top: .8rem;
+  left: 33%;
+  color: $color-primary;
+  font-weight: normal;
+
+  padding: 2rem;
+  @include respond(tab-land){
+    left: 0%;
+  }
+  @include respond(tab-port-min){
+    cursor: pointer;
+  }
+  @include respond(phone){
+    left: 3%;
+  }
+  &-right{
+    //top: 2.9rem;
+    //right: 0 !important;
+    color: $color-grey-light3 !important;
+    top: 4.9rem;
+    right: 11px  !important;
+    //top: 3.5rem;
+    //right: 0px !important;
+    //padding-top: 33px;
+    //padding-bottom: 33px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+
+  }
+  &-right-perfil{
+    //top: 2.9rem;
+    //right: 0 !important;
+    color: $color-grey-light3 !important;
+    //top: .2rem;
+    right: 11px  !important;
+    //top: 3.5rem;
+    //right: 0px !important;
+    //padding-top: 33px;
+    //padding-bottom: 33px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+
+  }
+}
+.desplegar{
+  position: absolute;
+  font-weight: normal;
+  @include respond(tab-port-min){
+    cursor: pointer;
+  }
+  &-right{
+    //color: $color-primary ;
+    font-size: 2rem !important;
+    right: 11px  !important;
+  }
+  &-180{
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  &-90{
+    //color: $color-primary ;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+}
+.visto{
+  color: #A9C2D6 !important;
+  top: 41%;
+  right: 11px !important;
+  @include respond(tab-port-min){
+    cursor: pointer;
+  }
+  &-buscador{
+    position: absolute;
+    top: 2.5rem;
+    left: 94%;
+    color: $color-primary;
+    font-weight: normal;
+  }
+}

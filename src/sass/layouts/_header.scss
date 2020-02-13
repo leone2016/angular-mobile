@@ -1,0 +1,228 @@
+.header {
+    position: fixed;
+    text-align: center;
+    border-bottom: 1px solid #D5D5D5;
+    display: block;
+    background-position: -32% -62em;
+    background-repeat: no-repeat;
+    background-size: 58%;
+    width: 100%;
+    right: 0;
+    //border: 1px solid #D5D5D5;
+    //padding-top: env(safe-area-inset-top);
+    &-fondo {
+        position: absolute;
+        top: -27%;
+        left: 14%;
+        width: 50%;
+        transform: translate( -50%, -50%);
+    }
+    &-img {
+        position: absolute;
+        top: 1rem;
+        /*antes: 40px*/
+        left: 9rem;
+        /*antes: 40px*/
+        width: 10vh;
+        @include respond(tab-port-min) {
+            cursor: pointer;
+        }
+    }
+    &-primary {
+        top: 0;
+        box-shadow: 0 .2rem 1rem rgba($color-black, .2);
+        z-index: 10;
+        background-image: url("assets/img/trazo.svg");
+        background-color: $color-white;
+        padding: 6rem .1rem 1rem 1rem;
+        @include respond(tab-land) {
+            display: none;
+        }
+    }
+    &-secundary {
+        font-size: $default-font-size;
+        top: 7rem;
+        z-index: 9;
+        background-color: $color-grey-light;
+        //padding: 5.5rem .1rem 1rem 1rem;
+        padding: 2.5rem .1rem 1.5rem 1.2rem;
+        //padding-top: env(safe-area-inset-top);
+        @include respond(tab-land) {
+            background-color: $color-white;
+            top: 0;
+            display: block;
+        }
+        span {
+            padding: 2%;
+            font-size: 2rem;
+            i {
+                color: $color-primary;
+            }
+            color: $color-secondary;
+        }
+    }
+    &-tertiary {
+        font-size: $default-font-size;
+        top: 7rem;
+        z-index: 9;
+        background-color: $color-grey-light;
+        border-bottom: transparent;
+        padding: 2.5rem .1rem 1.5rem 1.2rem;
+        @include respond(tab-land) {
+            background-color: transparent;
+            top: 0;
+            display: block;
+        }
+        span {
+            padding: 2%;
+            font-size: 1.569rem;
+            color: $color-white;
+            i {
+                display: none;
+            }
+        }
+    }
+    &-logologin {
+        position: relative;
+        left: 50%;
+        -webkit-transform: translate(-50%, -28rem);
+        transform: translate(-50%, 10rem);
+    }
+}
+
+.header__2 {
+    //height: 100vh;/*view x heigth*/
+    //background-image:url("assets/img/trazo.svg") ;
+    //background-size: cover;
+    position: relative;
+    &-fondo {
+        position: absolute;
+        top: -27%;
+        left: 14%;
+        width: 50%;
+        transform: translate( -50%, -50%);
+        @include respond(tab-port) {
+            transform: translate( -50%, -30%);
+        }
+        @include respond(phone) {
+            display: none;
+        }
+    }
+    @include respond(phone) {
+        height: 26vh;
+        /*view x heigth*/
+        background-image: url("assets/img/trazo.svg");
+        //background-size: cover;
+        background-position: 41% -34em;
+    }
+    &-img {
+        position: absolute;
+        top: 10%;
+        left: 4%;
+        @include respond(tab-port-min) {
+            cursor: pointer;
+        }
+        @include respond(phone) {
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%);
+        }
+        //transform: translate( -50%, -50%);
+    }
+    height: 26vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: -13% -76%;
+    filter: contrast(89%);
+    z-index: 10;
+}
+
+//.header__2 {
+//
+//  background-image: url(trazo.svg);
+//  /* background-repeat: no-repeat; */
+//  /* background-attachment: fixed; */
+//  /* background-position: center top; */
+//  /* background-size: cover; */
+//  /* background-position: top; */
+//  /* position: relative; */
+//  /* padding: 1rem; */
+//  height: 26vh;
+//  background-attachment: fixed;
+//  background-position: 50% 19rem;
+//  /* position: absolute; */
+//}
+.no-web {
+    @include respond(tab-land-min) {
+        display: none;
+    }
+}
+
+.no-tab {
+    @include respond(tab-land) {
+        display: none;
+    }
+}
+
+.no-visible {
+    @include respond(phone) {
+        animation-name: difuminar;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        display: none;
+    }
+}
+
+.no-padding {
+    padding: unset !important;
+}
+
+.iphonex {
+    padding-top: env(safe-area-inset-top);
+}
+
+.iphonex-margin {
+    margin-top: 1.5rem;
+}
+
+.acercade {
+    color: $color-grey-light3;
+    font-size: $default-font-medium;
+    text-align: center;
+    //left: 50%;
+    //-webkit-transform: translate(-50%, -28rem);
+    //transform: translate(-50%,0);
+    &-header {
+        position: absolute;
+        font-family: inherit;
+        left: 50%;
+        transform: translate(-50%, 0rem);
+        //transform: translate(50%,0);
+    }
+    &-bayteq {
+        position: fixed;
+        bottom: 0;
+        font-family: inherit;
+        display: block;
+        left: 51%;
+        transform: translate(-50%, -5rem);
+        //left: 35%;
+        //transform: translate(50%,0);
+        //font-size: $default-font-medium;
+        //color: $color-grey-light3;
+        //padding-bottom: env(safe-area-inset-bottom);
+        //-webkit-transform: translate(-50%, -4rem);
+        //transform: translate(-50%, -4rem);
+    }
+    &-bayteq:after {
+        content: "www.bayteq.com";
+        padding: 2px;
+        display: none;
+        position: fixed;
+        color: $color-primary;
+        text-align: center;
+    }
+    &-bayteq:hover:after {
+        display: block;
+    }
+}

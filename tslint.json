@@ -1,6 +1,11 @@
 {
-  "extends": "tslint:recommended",
+  "extends":[
+    "rxjs-tslint-rules",
+    "tslint:recommended"
+  ],
   "rules": {
+    "rxjs-add": { "severity": "error" },
+    "rxjs-no-unused-add": { "severity": "error" },
     "array-type": false,
     "arrow-parens": false,
     "deprecation": {

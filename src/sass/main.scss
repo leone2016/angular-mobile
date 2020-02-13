@@ -1,0 +1,39 @@
+/*
+abstracts
+ */
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "abstracts/utilities";
+
+
+/*
+base
+ */
+@import "base/base";
+@import "base/typography";
+@import "base/animation";
+/*
+components
+ */
+@import "components/form";
+@import "components/botton";
+@import "components/dialog";
+@import "components/popup";
+@import "components/card";
+@import "components/generic";
+@import "components/menu";
+@import "components/perfil";
+@import "components/calendario";
+@import "components/loader";
+@import "components/onboarding";
+/*
+layout
+ */
+@import "layouts/navigation";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/splash";
+/*
+pages
+ */
+

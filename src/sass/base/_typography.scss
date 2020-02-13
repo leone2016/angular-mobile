@@ -1,0 +1,40 @@
+.heading-secondary{
+  //@include absCenter;
+  position: relative;
+  color: $color-primary;
+  font-size: 2rem;
+  &-parrafo{
+    font-size: 2rem;
+  }
+}
+.heading-tertiary{
+  //@include absCenter;
+  position: relative;
+  color: $color-primary;
+  font-size: 3.3rem;
+  margin-bottom: 10px;
+  &-parrafo{
+    font-size: 2rem;
+  }
+}
+.heading-primary{
+  //@include absCenter;
+  //position: relative;
+  padding: 2%;
+  color: $color-secondary;
+  font-size: 2rem;
+}
+.heading-white{
+  //@include absCenter;
+  //position: relative;
+  padding: 2%;
+  color: $color-white;
+  font-size: 2rem;
+}
+p {
+  display: block !important;
+  margin-block-start: 5px !important;
+  margin-block-end: 5px !important;
+  margin-inline-start: 0px !important;
+  margin-inline-end: 0px !important;
+}

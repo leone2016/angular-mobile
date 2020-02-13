@@ -1,0 +1,29 @@
+<nav class="header header-primary  " >
+  <!--=======================================================-->
+  <!--Logo-->
+  <!--=======================================================-->
+  <div class="logo">
+    <img [routerLink]="['/nuevacita']" class="header-img" src="../../../assets/undraw/undraw_startman1_h7l9.svg" alt="logo">
+  </div>
+  <div class="menu__web">
+    <div class="menu__web-register" >
+      <button [routerLink]="['/registrate']" class="btn__small btn__small-tertiary">Sing in</button>
+      <button [routerLink]="['/login']" class="btn__small btn__small-secondary">Login</button>
+    </div>
+<!--    <div class="menu__web-register user">Hola </div>-->
+    <div class="menu__web-navigation">
+      <ul>
+        <li class="menu__web-item" routerLinkActive="active"><a [routerLink]="['/demo']" class="menu__web-link"><i class="menu__web-icon  icon-search-2" style="font-size: 1.5em"></i>item 1</a></li>
+        <li class="menu__web-item" routerLinkActive="active"><a [routerLink]="['/demo']" class="menu__web-link" href=""><i class="menu__web-icon pi icon-clock" style="font-size: 1.5em"></i>Item 2</a></li>
+        <li class="menu__web-item" routerLinkActive="active"><a [routerLink]="['/demo']" class="menu__web-link" href=""><i class="menu__web-icon pi icon-perfil" style="font-size: 1.5em"></i>Item 3 </a>
+        </li>
+        <li class="menu__web-item" routerLinkActive="active"><a [routerLink]="['/demo']" class="menu__web-link" href=""><i class="menu__web-icon pi icon-estetoscopio" style="font-size: 1.5em"></i>Data</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--=======================================================-->
+  <!--fin logo-->
+  <!--=======================================================-->
+</nav>
+

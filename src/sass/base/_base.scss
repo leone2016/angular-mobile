@@ -1,0 +1,54 @@
+/* this defines what 1rem is*/
+
+html {
+    /*1rem  = 10px */
+    /*transform to responsive*/
+    /*10px/16 = 62.5 * 100 = 62.5 */
+    /*trasform responsive to px*/
+    /*.625 * 16 = 10px */
+    /*.625 * 20 = 12.5px */
+    font-size: 65%;
+    /*antes: 10px s3-c18*/
+    /* if I put 100% the root detected 16px by default*/
+    //padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+body {
+    background-color: $color-white;
+    //font-family: 'Helvetica', 'Arial', sans-serif;
+    //font: 400 13.3333px Arial !importan;
+    //font: 400 13.3333px Helvetica Regular !important;
+    //font-family: 'Helvetica Regular', Helvetica, Arial, sans-serif !important;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+    @include scroll;
+}
+
+body:before {
+    filter: blur(8px);
+}
+
+.page-content {
+    box-sizing: border-box;
+    //padding: 2.4rem;
+    //margin-bottom: 10px;
+    //@include respond(tab-land){
+    //  padding-bottom: 2.8rem;
+    //}
+    padding-bottom: env(safe-area-inset-bottom);
+    //padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+.centrar {
+    font-size: $default-font-medium;
+    color: $color-grey-dark;
+    text-align: center;
+    @include absCenter;
+}
+
+.outside {
+    display: none;
+}
+
+//.inside{
+//  display: block !important;
+//}

@@ -1,0 +1,127 @@
+.l_calendario{
+  height: 100vh !important;
+  width: 100% !important;
+  position: fixed !important;
+  top:0 !important;
+  left: 0 !important;
+  background-color: rgba($color-black,.5);
+  z-index: 1000 !important;
+  &__content {
+   @include absCenter;
+    background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3) !important;
+    border-radius: 1rem !important;
+    width: 30rem !important;
+    height: 40rem !important;
+  }
+  &_header{
+    background-color: $color-secondary;
+    color: $color-white;
+    padding: 3rem 2.5rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    &-year{
+      font-size: $default-font-size;
+    }
+    &-date{
+      font-size: $font-size-medium;
+    }
+  }
+  &_body{
+    padding: 1.5rem 1.5rem;
+    &-calendar{
+      //@include absCenter;
+      & .ui-calendar {
+        position: relative;
+        display: inline;
+      }
+      & .ui-widget-header {
+        background: $color-white;
+      }
+      & .ui-datepicker td>a {
+        //padding: 1em !important;
+        font-size: $default-font-size;
+      }
+      .ui-widget-content {
+         border: 0 none;
+      }
+      /*
+      cuando selecciona
+       */
+      & .ui-datepicker.ui-widget .ui-datepicker-calendar td a.ui-state-active {
+        border: .5px solid $color-calendario-primary !important;
+        background-color: rgba($color-calendario-primary,.2) !important;
+        color: $color-calendario-primary !important;
+        border-radius: 6rem;
+      }
+      /**
+      dia seleccionado
+       */
+      & .ui-datepicker.ui-widget .ui-datepicker-calendar td a.ui-state-highlight {
+        background-color: $color-calendario-secondary;
+        color: $color-calendario-primary;
+        border-radius: 6rem;
+      }
+      & .ui-widget, & .ui-widget select{
+        font-family: inherit;
+      }
+      & .ui-datepicker .ui-datepicker-title {
+        text-align: left !important;
+        font-size: 14px !important;
+      }
+      & .ui-datepicker .ui-datepicker-prev {
+        left: 18.5rem;
+      }
+      & .ui-datepicker.ui-widget .ui-datepicker-calendar td {
+        border-bottom: 2px transparent;
+      }
+      & .ui-datepicker .ui-datepicker-calendar td:not(.ui-state-disabled) a:hover {
+        background-color: $color-calendario-secondary;
+        color: $color-calendario-primary;
+        border-radius: 6rem;
+      }
+      /**
+      calendario seleccion mes y fecha
+       */
+      & .ui-datepicker .ui-datepicker-title {
+        margin: 0 0 !important;
+      }
+      & .ui-datepicker{
+        &::-webkit-scrollbar{
+          width: 5px;
+          height: 3px;
+          background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+          -webkit-border-radius: 8px;
+          background-color: rgba($color-secondary, 0.8);
+        }
+      }
+      & .ui-datepicker .ui-datepicker-title select {
+        border-radius: 10px;
+
+      }
+    }
+
+    & .ui-datepicker .ui-datepicker-title select {
+      font-size: 1.2em;
+      margin: .125em 0;
+      vertical-align: middle;
+    }
+
+    & .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+      position: absolute;
+      top: -.2em;
+    }
+    & .ui-datepicker .ui-datepicker-header a {
+      color: $color-secondary;
+      font-size: 2.1rem;
+    }
+    & select:not([size]):not([multiple]), select[size="0"], select[size="1"] {
+      background-color: $color-white;
+    }
+    &_footer{}
+  }
+
+
+}

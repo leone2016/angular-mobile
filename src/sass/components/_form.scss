@@ -1,0 +1,481 @@
+.form {
+    &__error &__input {
+        border: 1.5px solid $color-red !important;
+        color: $color-red !important;
+    }
+    &__error {
+        &-label {
+            float: right;
+            color: red !important;
+            font-size: $default-font-size;
+            display: none;
+        }
+    }
+    &__forgetPass {
+        font-size: 1.4rem;
+        color: $color-primary !important;
+        float: right;
+        //text-decoration: none;
+        //position: absolute;
+        //right: 6%;
+        //top: 40%;
+    }
+    &-label {
+        //padding-top: 1rem;
+        padding-left: 1rem;
+        font-size: $default-font-size;
+        color: $color-grey-dark;
+        //font-weight: bold;
+    }
+    //&__input, .ng-invalid{
+    //  border: 1px solid $color-red !important;
+    //  color: $color-red;
+    //}
+    &__input {
+        margin-top: .3rem;
+        margin-bottom: .5rem;
+        font-size: $default-font-size;
+        font-family: inherit; //define el tipo de letra que tiene toda la pagina (utilizar normalize para no escribir esto)
+        color: inherit;
+        padding: 1.25rem 2rem;
+        background-color: $color-white;
+        border: 1px solid $color-grey;
+        width: 100%;
+        display: block;
+        transition: all .5s;
+        &-text {
+            border-radius: 10rem;
+        }
+        &-visible1 {
+            @include respond(tab-port) {
+                display: none;
+            }
+        }
+        &-visible2 {
+            @include respond(tab-port-min) {
+                display: none;
+            }
+        }
+        &-text-button {
+            width: 100%;
+            border-top-left-radius: 10rem;
+            border-bottom-left-radius: 10rem;
+            border-right: 0.5px solid $color-white;
+        }
+        &-text+span {
+            @include respond(tab-port-min) {
+                cursor: pointer;
+            }
+            position: relative;
+            i {
+                position: absolute;
+                top: 13px;
+                right: 10px;
+                z-index: 1;
+                background-color: $color-white;
+            }
+        }
+        &-button,
+        &-text-button+span {
+            border-top-right-radius: 10rem;
+            border-bottom-right-radius: 10rem;
+            border-top: 0.5px solid $color-grey !important;
+            border-bottom: 0.5px solid $color-grey !important;
+            border-right: 0.5px solid $color-grey !important;
+        }
+        &:focus {
+            outline: none;
+        }
+        &:focus:invalid {}
+        &::-webkit-input-placeholder {
+            color: $color-grey;
+        }
+        // z-index: 1;
+    }
+    //form__input form__input-text ng-untouched ng-pristine ng-valid
+    &__input.ng-valid.ng-touched {
+        border: 1.5px solid $color-primary;
+        color: $color-primary;
+        .form-label {
+            color: $color-primary;
+        }
+    }
+    &__input.ng-touched.ng-invalid {
+        border: 1.5px solid $color-red;
+        color: $color-red;
+    }
+    &__dropdown.ng-valid.ng-touched {
+        border: 1.5px solid $color-primary;
+        ;
+        color: $color-primary;
+        border-radius: 25px;
+        .form-label {
+            color: $color-primary;
+        }
+        & label.ui-dropdown-label {
+            border: 0 none;
+            color: $color-primary
+        }
+    }
+    // da color azul cuando se escribe dentro
+    & .ui-inputtext:focus {
+        box-shadow: 0 0 23px transparent !important;
+    }
+    &__dropdown {
+        & .ui-dropdown label.ui-dropdown-label {
+            @include respond(tab-port-min) {
+                cursor: pointer;
+            }
+            margin-top: 0rem;
+            margin-bottom: 0rem;
+            font-size: 1.3rem;
+            font-family: inherit;
+            padding: 1.25rem 2rem;
+            background-color: transparent;
+            border: 1px solid $color-grey;
+        }
+        & .ui-state-default {
+            border: 0 none !important;
+            background-color: transparent;
+        }
+        width: 100% !important;
+        top: 47px !important;
+        &:focus {
+            outline: none;
+        }
+        & .ui-corner-all {
+            border-radius: 25px !important;
+        }
+        & .ui-dropdown.ui-state-focus {
+            box-shadow: 0 0 23px transparent !important;
+        }
+        & .ui-dropdown:not(.ui-state-disabled):hover {
+            border-color: $color-grey;
+            background-color: rgba($color-white, .1) !important;
+        }
+        & .ui-dropdown .ui-dropdown-trigger {
+            //border: .5px solid $color-grey;
+            //border-right: .5px solid $color-grey !important;
+            //      border-top: .5px solid $color-grey;
+            //      border-bottom: .5px solid $color-grey;
+            background-color: transparent;
+            border: 0 none !important;
+            width: 3.5em;
+            font-size: initial;
+            right: -7px;
+        }
+        & .ui-dropdown .ui-state-focus {
+            outline: none;
+            //box-shadow: 0 1rem 2rem rgba($color-black, .1);
+        }
+        //& .ui-corner-right {
+        //  display: none;
+        //}
+        /*VISUALIZA RESULTADOS*/
+        & .ui-dropdown-panel .ui-dropdown-list {
+            padding: .2rem;
+            border: 0 none;
+            font-size: 1.2rem !important;
+            color: $color-primary;
+        }
+        & .ui-helper-reset {
+            line-height: 1.8 !important;
+        }
+        & .ui-dropdown-panel .ui-dropdown-item {
+            padding: 0.5em 1.25em;
+        }
+        & .ui-state-highlight {
+            background-color: $color-secondary !important;
+        }
+        & .ui-shadow {
+            box-shadow: 0 0pC 12px 2px rgba(0, 0, 0, 0.2);
+            top: 47px !important;
+        }
+        & .ui-inputgroup .ui-inputtext:not(:last-child) {
+            border-right: 0.5px solid #000 !important;
+        }
+        & .ui-inputgroup .ui-inputtext:not(:first-child) {
+            border-left: 0.5px solid #000 !important;
+        }
+    }
+    /*
+  CAJAS DE TEXTO MASCARAS
+   */
+    &__mask {
+        &.ui-state-default {
+            border: 1px solid #d6d6d6;
+        }
+        .ui-inputtext {
+            outline: medium none;
+            padding: 1.25rem 2rem;
+            font-family: inherit;
+            //border: 1px solid $color-grey ;
+            width: 100%;
+            font-size: $default-font-size;
+            margin-top: .3rem;
+            margin-bottom: .5rem;
+            border-radius: 10rem !important;
+            border: 1.2px solid $color-grey !important;
+            //border-right: 1.2px solid $color-grey !important;
+            &:focus {
+                outline: none;
+            }
+            &::-webkit-input-placeholder {
+                color: $color-grey;
+            }
+            z-index: 1;
+        }
+        //.ui-inputgroup p-inputmask:not(:last-child) .ui-inputtext {
+        //  border-top-right-radius: 10rem;
+        //  border-bottom-right-radius: 10rem;
+        //  border-right: 0 none;
+        //}
+        .ui-inputtext:enabled:hover {
+            border-color: $color-grey;
+        }
+    }
+    &__mask+span {
+        @include respond(tab-port-min) {
+            cursor: pointer;
+        }
+        position: relative;
+        font-size: 1.5em !important;
+        i {
+            position: absolute;
+            top: 16px;
+            right: 10px;
+            z-index: 1;
+            background-color: $color-white;
+        }
+    }
+    &__mask.ng-valid.ng-touched,
+    &__mask.ng-valid.ng-touched+span {
+        .ui-inputtext {
+            border: 1.5px solid $color-primary !important;
+            ;
+            color: $color-primary;
+        }
+        .form-label {
+            color: $color-primary;
+        }
+    }
+    &__mask.ng-touched.ng-invalid {
+        .ui-inputtext {
+            border: 1.5px solid $color-red !important;
+            color: $color-red;
+        }
+    }
+    /*
+     INICIO CSS RADIO_BUTTON
+  */
+    &__radio-group {
+        width: 50%;
+        display: inline-block;
+        //padding: 1.25rem 0;
+    }
+    &__radio-input {
+        display: none;
+    }
+    &__radio-label {
+        font-size: $default-font-size;
+        @include respond(tab-port-min) {
+            cursor: pointer;
+        }
+        border: 1px solid #A9C2D6;
+        color: #A9C2D6;
+        width: 100%;
+        display: inline-block;
+        padding: 1.25rem 0;
+    }
+    &__radio-label.left {
+        border-top-left-radius: 10rem;
+        border-bottom-left-radius: 10rem;
+    }
+    &__radio-label.right {
+        border-top-right-radius: 10rem;
+        border-bottom-right-radius: 10rem;
+    }
+    &__radio-label.selected {
+        border: 1.5px solid $color-primary !important;
+        color: $color-primary;
+        z-index: 1;
+    }
+    &__radio-icon {
+        padding: 0 1rem 0 2rem;
+    }
+    &__radio-input:checked+&__radio-label::after {
+        //&__radio-input:checked cuando el radio esta seleccionado
+        // se selecciona el hermano (&__radio-label) con su hijo(&__radio-button::after)
+        // &__radio-button::after este componente va cambiar cuando el radio (__radio-input:checked) este seleccionado
+        border: 2px solid $color-primary;
+        //opacity: 1;
+    }
+    &__radio-input:checked+&__radio-label &__radio-icon::after {
+        //&__radio-input:checked cuando el radio esta seleccionado
+        // se selecciona el hermano (&__radio-label) con su hijo(&__radio-button::after)
+        // &__radio-button::after este componente va cambiar cuando el radio (__radio-input:checked) este seleccionado
+        //font-size: 5rem;
+        //opacity: 1;
+        background-color: orangered;
+    }
+}
+
+.no-sombra {
+    box-shadow: 0 1rem 2rem rgba($color-white, .1) !important;
+}
+
+.ui-placeholder {
+    color: $color-grey;
+}
+
+.buscador__content {
+    position: fixed;
+    top: 7rem;
+    right: 0rem;
+    display: block;
+    z-index: 2;
+    //background-color: rgba($color-black, .1);
+    background-color: $color-grey-light;
+    width: 100%;
+    height: 12rem;
+    @include respond(tab-land) {
+        top: 6.3rem;
+    }
+}
+
+.buscador__content.up {
+    @include respond(tab-land) {
+        top: 0 !important;
+        transform: translate(0, -45%) translateY(6.3rem);
+        animation-timing-function: ease-in;
+        animation-duration: 1s;
+    }
+}
+
+.buscador__content2 {
+    position: fixed;
+    top: 13rem;
+    right: 67rem;
+    display: block;
+    z-index: 12;
+    width: 26%;
+}
+
+.swal2-popup {
+    position: relative !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    width: 30em !important;
+    padding: 1.25em !important;
+    border-radius: 25px !important;
+    background: $color-white !important;
+    font-family: inherit !important;
+    //font-size: 1.5rem;
+    box-sizing: border-box !important;
+}
+
+.swal2-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    //padding: 35px 35px 35px 35px;
+    background-color: transparent;
+    z-index: 1060;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.swal2-popup #swal2-content {
+    text-align: center;
+    word-break: break-word;
+    color: $color-primary;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.swal2-popup .swal2-styled.swal2-confirm {
+    border: 0;
+    border-radius: 1.25em;
+    background: initial;
+    background-color: $color-primary !important;
+    color: #fff;
+    font-size: 1.3em;
+    width: 14rem !important;
+}
+
+.modal__dialog .ui-widget {
+    overflow-x: auto;
+}
+
+.mat-simple-snackbar-action {
+    color: $color-secondary;
+}
+
+.mat-snack-bar-container {
+    border-radius: 10rem !important;
+}
+
+.text-up {
+    //position:absolute;
+    //top:31%; /* 50% sobre el objeto padre*/
+    //left:50%; /* 50% sobre el objeto padre*/
+    //transform: translate( -50%, -50%);/* centra objetos con el 50% respecto al MISMO elemento */
+    @include respond(phone) {
+        transform: translate(0%, -50%) translateY(-8.5rem);
+        animation-name: moveInUP;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        background-color: $color-grey-light;
+        position: fixed;
+        left: 0;
+        width: 100%;
+        padding: .3rem 0rem;
+        z-index: 2;
+    }
+}
+
+.error-excep {
+    ul {
+        list-style: none; //elimina los puntos
+        width: 100%;
+        margin: 0 auto; // cero top, bottom y AUTO iz, derecha
+        li {
+            text-align: left;
+            color: $color-primary;
+            font-size: 1.5rem;
+            padding: 1rem;
+            &:not(:last-child) {
+                border-bottom: 1px solid $color-grey-light;
+            }
+            &:active {
+                background-color: $color-secondary;
+                border-radius: 25px;
+                color: $color-white !important;
+            }
+        }
+        li.left {
+            text-align: left !important;
+            color: $color-grey-light3;
+        }
+        li.active {
+            background-color: $color-primary;
+            border-radius: 25px;
+            color: $color-white;
+        }
+    }
+}
+
+
+/* The container must be positioned relative: */
+
+
+/* The container must be positioned relative: */
+
+
+/* The container must be positioned relative: */

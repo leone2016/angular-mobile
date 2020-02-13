@@ -1,0 +1,23 @@
+#page-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba($color-white,.8);
+  z-index: 777;
+
+}
+.spinner {
+  background :url("assets/preloader.gif") no-repeat;
+  width: 145px;
+  height: 110px;
+  background-size: contain;
+  @include absCenter;
+}
+#page-preloader .spinner.img {
+  background: none;
+}
+#page-preloader .spinner.img:after {
+  display: none;
+}

@@ -1,0 +1,130 @@
+<h3 class="heading-tertiary u-center-text l-margin-top-medium" >Datos Personales</h3>
+<p class="heading-secondary heading-secondary-parrafo u-center-text" >Por favor llene los datos</p>
+
+<form  (ngSubmit)="guardar()" class="form u-margin-top-medium" >
+  <!--  *ngIf="primeraParte"-->
+  <div class="ui-g ui-fluid">
+    <div class="ui-g-12 ui-md-12 ">
+      <label class="form-label">Tipo de Documento</label>
+      <div class="ui-inputgroup">
+      </div>
+    </div>
+    <div class="ui-g-12 ui-md-12 u-margin-top-xsmall ">
+      <label class="form-label">Identificación</label>
+      <div class="ui-inputgroup">
+        <input type="text"
+               class="form__input form__input-text"
+               maxlength="10"
+               placeholder="Ej.: 1724184549"
+               id="identificacion">
+      </div>
+      <div >
+        <p class="form__error-label" for="usuario"
+           >
+          Pasaporte mínimo 9 caracteres</p>
+        <p class="form__error-label" for="usuario">Cédula
+          invalida</p>
+      </div>
+    </div>
+    <!-- nombres -->
+    <div class="ui-g-12 ui-md-12 u-margin-top-xsmall">
+      <label class="form-label">Nombres</label>
+      <div class="ui-inputgroup">
+        <input type="text" class="form__input form__input-text"
+               maxlength="50" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ'Üü\s]+"
+               placeholder="Ej.: Emilia Isabelle">
+        <span><i class="navigation__link-icon icon-lock" style="font-size: 1.8em !important; color: #707070;"
+                 ></i></span>
+
+      </div>
+    </div>
+    <!-- apellidos -->
+    <div class="ui-g-12 ui-md-12 u-margin-top-xsmall">
+      <label class="form-label">Apellidos</label>
+      <div class="ui-inputgroup">
+        <input type="text" class="form__input form__input-text"
+               maxlength="50" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ'Üü\s]+"
+               placeholder="Ej.: Rose Clarke">
+        <span><i class="navigation__link-icon icon-lock" style="font-size: 1.8em !important; color: #707070;"
+                 ></i></span>
+
+      </div>
+    </div>
+    <!-- genero -->
+    <div class="ui-g-12 ui-md-12 u-margin-top-xsmall">
+      <label class="form-label">Género</label>
+      <div class="ui-inputgroup">
+        <div class="form__radio-group form__radio-group-left accion">
+          <input id="female" type="radio" class="form__radio-input" value="F"  required>
+          <label for="female"  data-theme="mujer"
+                 [ngClass]="'selected'" class="form__radio-label left">
+            <i class="icon-mujer form__radio-icon"></i>Femenino
+          </label>
+        </div>
+        <div class="form__radio-group form__radio-group-rigth accion">
+          <input id="male" type="radio" class="form__radio-input" value="M"  required>
+          <label for="male"  data-theme="hombre"
+                 class="form__radio-label right">
+            <i class="icon-hombre form__radio-icon"></i>Masculino
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- Fecha de Nacimiento -->
+    <div class="ui-g-12 ui-md-12 u-margin-top-xsmall">
+      <label class="form-label">Fecha de nacimiento</label>
+      <div class="ui-inputgroup">
+        <input type="text" class="form__input form__input-text"
+                 readonly
+               placeholder="Ej.: 10-11-1991">
+        <span><i class="navigation__link-icon icon-lock" style="font-size: 1.8em !important; color: #707070;"
+                 ></i></span>
+      </div>
+    </div>
+  </div>
+  <div class="ui-g ui-fluid">
+    <div class="ui-g-12 ui-md-12 ">
+      <label class="form-label">Parentesco Familiar</label>
+      <div class="ui-inputgroup">
+        <input type="text" class="form__input form__input-text"
+               maxlength="50" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" placeholder="Ej.: Abuelo " >
+      </div>
+    </div>
+  </div>
+
+  <div class="u-margin-top-huge ">
+    <div class="ui-g-12 ui-md-12 u-margin-bottom-medium">
+      <div class="ui-inputgroup">
+
+        <button type="submit" label="Click" class="btn btn-secondary" >Finalizar</button>
+      </div>
+    </div>
+  </div>
+</form>
+<!--<app-l-datepicker [verFechaIN]="verFecha"-->
+<!--                  (verFechaOUT)="eventOut($event)"-->
+<!--                  (fechaSeleccionOUT)="eventFechaOut($event)"-->
+<!--                  [fechaAnioDesdeHastaIN]="anioDesdeHasta"-->
+<!--                  [fechaSeleccion]="fechaSeleccion"-->
+<!--                  [maxDateIN]="true">-->
+<!--</app-l-datepicker>-->
+<!--<section *ngIf="mensaje_ok">-->
+<!--  <div class="perfil&#45;&#45;trazo">-->
+<!--    <img class="trazo-azul mensaje" src="assets/img/icon-trazo-azul.svg">-->
+<!--    <img class="mensaje" src="assets/img/icon-trazo-mail.svg">-->
+<!--  </div>-->
+<!--  <div class="ui-g-12 ui-md-12 u-margin-top-xhuge">-->
+<!--    <div class="ui-inputgroup perfil&#45;&#45;texto">-->
+<!--      <p class="heading-tertiary u-center-text  u-margin-bottom-small">Registro Exitoso</p>-->
+<!--      <p class="heading-secondary u-center-text">Se ha agregado un nuevo dependiente</p>-->
+<!--    </div>-->
+<!--    <div class="ui-inputgroup ">-->
+<!--      <button type="button" label="Click" class="btn  btn-secondary btn-bottom  btn-bottom-2" (click)="cerrar()">-->
+<!--        Utilizar dependiente-->
+<!--      </button>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<!--<app-popup-mini [verPopUpminiIN]="verPopUpmini" (verPopUpminiOUT)="eventOutSelected($event)"-->
+<!--                (catalogoSelectOUT)="seleccion($event)"></app-popup-mini>-->

@@ -1,0 +1,45 @@
+.menu__web{
+  position: fixed;
+  padding: .5rem;
+  display: inline-block;
+  float: right;
+  right: 10%;
+  top: 0%;
+  font-size: $default-font-size;
+  &-register{ float: right;}
+  &-register.user{
+    padding-right: 2rem;
+    top: .5rem;
+    position: relative;
+    color: $color-secondary;
+  }
+  &-navigation{
+    list-style: none;
+    padding: 2rem;
+    //@include respond(tab-port){
+    //  font-size: x-small;
+    //}
+  }
+  &-item{
+    display: inline-block;
+    color: $color-grey-dark;
+    &:not(:last-child){
+      margin-right: 1.5rem;
+    }
+  }
+  &-icon{
+    padding-right: .8rem;
+    @include respond(tab-port){
+    display: none;
+    }
+  }
+  &-link{
+    text-decoration: none;
+    color: $color-grey-dark;
+  }
+
+  @include respond(tab-land){
+    display: none;
+  }
+
+}
